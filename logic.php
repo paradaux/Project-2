@@ -1,13 +1,12 @@
 <html>
 	<head>
-		<title>Rememberable Passphrase</title>
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 	</head>
 	<body>
 		<?php
-		error_reporting(E_ALL);       # Report Errors, Warnings, and Notices
-		ini_set('display_errors', 1); # Display errors on page (instead of a log file)
+		#error_reporting(E_ALL);       # Report Errors, Warnings, and Notices
+		#ini_set('display_errors', 1); # Display errors on page (instead of a log file)
+		$numAppend = rand(0,9);
+		$symAppend = randSym();
 
 			function getAdverb(){
 				$adverbs = file("Sources/POS_Lists/adverbs.txt", FILE_IGNORE_NEW_LINES);
@@ -39,7 +38,7 @@
 				return $randVerb;
 			}
 
-			function passwordGenerator($pwdLength = 3, $symbols = FALSE, $numbers = FALSE){
+			function passwordGenerator($pwdLength = 3){
 				$passwordArray = array();
 				for ($i=0; $i < $pwdLength; $i++) {
 					switch ($i) {
@@ -66,37 +65,29 @@
 				}
 				return $passwordArray;
 			}
+
 			function randSym(){
 				$symArray = ['!','@','#','$','%','^','&','*'];
 				return $symArray[rand(0,7)];
 			}
 			$newPassword = passwordGenerator($_GET["maxLength"],$_GET["symReq"],$_GET["numReq"]);
-			$numAppend = rand(0,9);
-			$symAppend = randSym();
 
-			foreach ($newPassword as $key => $value) {
-				echo $value;
-				if ($key != $_GET["maxLength"] -1) {
-					echo "-";
-				}
-			}
 
 			//Getting mnemonic image to aid memory
-			$url = "https://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=".$newPassword[1]."%20".$newPassword[2]."&userip=INSERT-USER-IP";
+			#$url = "https://ajax.googleapis.com/ajax/services/search/images?v=1.0&q=".$newPassword[1]."%20".$newPassword[2]."&userip=INSERT-USER-IP";
 
 			// sendRequest
-			// note how referer is set manually
-			$ch = curl_init();
-			curl_setopt($ch, CURLOPT_URL, $url);
-			curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-			curl_setopt($ch, CURLOPT_REFERER, "localhost");
-			$body = curl_exec($ch);
-			curl_close($ch);
+			#$ch = curl_init();
+			#curl_setopt($ch, CURLOPT_URL, $url);
+			#curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+			#curl_setopt($ch, CURLOPT_REFERER, "localhost");
+			#$body = curl_exec($ch);
+			#curl_close($ch);
 
-			// now, process the JSON string
-			$json = json_decode($body, TRUE);
-			$results = $json['responseData']['results'][0];
+			//process the JSON string
+			#$json = json_decode($body, TRUE);
+			#$results = $json['responseData']['results'][0];
 			?>
-			<img src="<?=$results['url']?>" />
+
 	</body>
 <htmL>
