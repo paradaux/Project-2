@@ -43,8 +43,14 @@
 						<li>To use the generator, please select the length of the passphrase (range 3-5). Then tell the program if you need it to append a symbol or a number to the password.</li>
 					</ul>
 					<label>Number of Words (Range 3-5)<font color="#000"><input type="number" name="maxLength" value="3" max="5" min="3" /></font></label><br>
-					<label>Should the password include a symbol?<input type="checkbox" name="symReq" value="TRUE" /></label><br>
-					<label>Should the password include a number?<input type="checkbox" name="numReq" value="TRUE" /></label><br>
+					<label>Should the password include a symbol?
+						<input type="hidden" name="symReq" value="FALSE" />
+						<input type="checkbox" name="symReq" value="TRUE" />
+					</label><br>
+					<label>Should the password include a number?
+						<input type="hidden" name="numReq" value="FALSE" />
+						<input type="checkbox" name="numReq" value="TRUE" />
+					</label><br>
 					<input type="submit" value="Generate" />
 				</form>
 			</div>
