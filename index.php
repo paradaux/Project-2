@@ -15,16 +15,17 @@
 		<div class="container">
 			<div class="password-container">
 				<?php
+
 				foreach ($newPassword as $key => $value) {
 					echo $value;
 					if ($key != $_GET["maxLength"] -1) {
 						echo " ";
 					}
 				}
-				if ($_GET['symReq'] == TRUE){
+				if ($_GET['symReq'] == 1){
 					echo $symAppend;
 				}
-				if ($_GET['numReq'] == TRUE){
+				if ($_GET['numReq'] == 1){
 					echo $numAppend;
 				}
 				?>
@@ -44,12 +45,12 @@
 					</ul>
 					<label>Number of Words (Range 3-5)<font color="#000"><input type="number" name="maxLength" value="3" max="5" min="3" /></font></label><br>
 					<label>Should the password include a symbol?
-						<input type="hidden" name="symReq" value="FALSE" />
-						<input type="checkbox" name="symReq" value="TRUE" />
+						<input type="hidden" name="symReq" value="0" />
+						<input type="checkbox" name="symReq" value="1" />
 					</label><br>
 					<label>Should the password include a number?
-						<input type="hidden" name="numReq" value="FALSE" />
-						<input type="checkbox" name="numReq" value="TRUE" />
+						<input type="hidden" name="numReq" value="0" />
+						<input type="checkbox" name="numReq" value="1" />
 					</label><br>
 					<input type="submit" value="Generate" />
 				</form>
