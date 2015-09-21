@@ -6,7 +6,7 @@
 		<?php require("logic.php"); ?>
 		<style>
 		body {
-		  background-image: url("http://localhost/Sources/Images/AnimalBackgrounds/<?php echo sprintf("%02d",rand(1,15))?>.jpg");
+		  background-image: url("http://p2.legislatron.com/Sources/Images/AnimalBackgrounds/<?php echo sprintf("%02d",rand(1,15))?>.jpg");
 		  background-size: cover;
 		}
 		</style>
