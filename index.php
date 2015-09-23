@@ -35,13 +35,13 @@
 			<div class="side-bar-menu">
 				<form method="GET" action="index.php">
 					<div class="header">
-						<h1>This is a password generator!</h1>
+						<h1>This is a passphrase generator!</h1>
 					</div>
 					<ul>
 						<li>Hello and welcome to my passphrase generating website! This website is designed to generate an extremely memorable passphrase for you.</li>
 						<li>The idea here is that a passphrase will be much more memorable than a password. Additionally a computer program trying to brute force guess the password will have to deal with many more bits of entropy. <a href="http://xkcd.com/936/">This XKCD comic</a> might explain it a little better!</li>
 						<li></li>
-						<li>To use the generator, please select the length of the passphrase (range 3-5). Then tell the program if you need it to append a symbol or a number to the password.</li>
+						<li>To use the generator, please select the length of the passphrase (range 3-5). Then tell the program if you need it to append a symbol or a number to the password. The images of animals in suites are also randomly generated as a way to to produce excitement for the new passphrase and it adds panache to the overall website!</li>
 					</ul>
 					<label>Number of Words (Range 3-5)<font color="#000"><input type="number" name="maxLength" value="3" max="5" min="3" /></font></label><br>
 					<label>Should the password include a symbol?
