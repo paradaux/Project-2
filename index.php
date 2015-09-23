@@ -44,7 +44,7 @@
 						<li></li>
 						<li>To use the generator, please select the length of the passphrase (range 3-5). Then tell the program if you need it to append a symbol or a number to the password. The images of animals in suites are also randomly generated as a way to to produce excitement for the new passphrase and it adds panache to the overall website!</li>
 					</ul>
-					<label>Number of Words (Range 3-5)<input id="numField" type="number" name="maxLength" value="3" max="5" min="3" /></label><br>
+					<label>Number of Words (Range 3-5)<input class="input-text-black" type="number" name="maxLength" value="3" max="5" min="3" /></label><br>
 					<label>Should the password include a symbol?
 						<input type="hidden" name="symReq" value="0" />
 						<input type="checkbox" name="symReq" value="1" />
@@ -53,7 +53,7 @@
 						<input type="hidden" name="numReq" value="0" />
 						<input type="checkbox" name="numReq" value="1" />
 					</label><br>
-					<input type="submit" value="Generate" />
+					<input class="input-text-black" type="submit" value="Generate" />
 				</form>
 			</div>
 		</div>
