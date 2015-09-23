@@ -10,7 +10,8 @@
   color: #FFF;
 }
 
-form > input {
+
+.side-bar-menu > form > label > input {
   color: #000;
 }
 
