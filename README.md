@@ -1,5 +1,5 @@
 # Project-2
-Project 1 for CSCI-E15 is a simple Portfolio.
+Project 2 for CSCI-E15 is a simple Passphrase generator.
 
 ## Live URL
 <http://p2.legislatron.com> (Just reusing old domain I own)
